@@ -1,4 +1,3 @@
-const { deepStrictEqual } = require('assert');
 let fs = require('fs');
 
 // READ DIRECTORIES
