@@ -26,4 +26,4 @@ http.createServer((request, response) => {
         res.write(data);
         res.end();
     });
-}, 8080)
+}).listen(8080);
