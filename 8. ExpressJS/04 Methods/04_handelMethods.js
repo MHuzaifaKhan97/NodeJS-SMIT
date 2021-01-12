@@ -12,11 +12,14 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 // GET
 app.get('/', function (req, res) {
-    res.end(JSON.stringify(req.query)); // try: localhost:3000/?email=abc@example.com&pwd=12345
+    // res.end(JSON.stringify(req.query)); // try: localhost:3000/?email=abc@example.com&pwd=12345
+    // or 
+    res.sendFile('/index.html',{root: __dirname})
+    // res.json(req.query)
 });
 
 // POST
-app.post('/', (req, res) => {
+app.post('/user', (req, res) => {
     res.end(JSON.stringify(req.body));
 });
 
